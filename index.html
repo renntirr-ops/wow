@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREUS GROUP | Excellence Redefined</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-card: #141414;
+            --accent-gold: #d4af37;
+            --accent-gold-light: #f3e5ab;
+            --text-main: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --border-color: rgba(212, 175, 55, 0.2);
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.08) 0%, rgba(10, 10, 10, 1) 70%);
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #A0A0A0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            padding: 14px 35px;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+
+        .btn-gold:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-primary);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- STATS SECTION --- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            padding: 60px 8%;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .services {
+            padding: 100px 8%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: var(--accent-gold);
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 50px 8%;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.2rem; }
+            .nav-links { display: none; }
+            footer { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="#" class="logo">AUREUS</a>
+        <ul class="nav-links">
+            <li><a href="#about">Tentang Kami</a></li>
+            <li><a href="#services">Layanan</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">Holding Company Global</p>
+            <h1 class="hero-title">Membangun Masa Depan Berkelanjutan & Berkelas Dunia</h1>
+            <p class="hero-description">
+                Aureus Group memimpin transformasi di bidang investasi strategis, properti mewah, dan teknologi masa depan dengan standar keunggulan tertinggi.
+            </p>
+            <a href="#services" class="btn-gold">Jelajahi Layanan</a>
+        </div>
+    </section>
+
+    <!-- PENCAPAIAN / STATISTIK -->
+    <section class="stats">
+        <div class="stat-item">
+            <h3>$12B+</h3>
+            <p>Total Aset Dikelola</p>
+        </div>
+        <div class="stat-item">
+            <h3>45+</h3>
+            <p>Negara Operasional</p>
+        </div>
+        <div class="stat-item">
+            <h3>30+</h3>
+            <p>Tahun Pengalaman</p>
+        </div>
+    </section>
+
+    <!-- PILAR BISNIS / LAYANAN -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <p>Pilar Keunggulan</p>
+            <h2>Layanan & Bisnis Utama</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Investasi Strategis</h3>
+                <p>Mengidentifikasi dan mengembangkan portofolio bisnis bernilai tinggi di seluruh pasar global dengan pendekatan terukur.</p>
+            </div>
+            <div class="service-card">
+                <h3>Real Estate & Properti</h3>
+                <p>Mengembangkan kawasan komersial dan hunian premium berkonsep ramah lingkungan dengan arsitektur ikonis.</p>
+            </div>
+            <div class="service-card">
+                <h3>Inovasi Teknologi</h3>
+                <p>Mendukung riset dan implementasi teknologi kecerdasan buatan serta energi terbarukan untuk masa depan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo">AUREUS</div>
+        <p>&copy; 2026 Aureus Group International. Hak Cipta Dilindungi Undang-Undang.</p>
+    </footer>
+
+</body>
+</html>
 
