@@ -1,40 +1,155 @@
-------------------------------------------------
-🟠 BITCOIN
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BitcoinHub</title>
 
-The Future of Money
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
 
-Harga Live
-$118,540
+body{
+background:#0d1117;
+color:white;
+overflow-x:hidden;
+}
 
-▲ +2.35%
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(135deg,#111,#1b1b1b);
+}
 
-[ Lihat Harga ]   [ Pelajari Bitcoin ]
+.hero h1{
+font-size:60px;
+color:#f7931a;
+animation:glow 2s infinite alternate;
+}
 
--------------------------
+.hero p{
+margin:20px 0;
+font-size:20px;
+color:#ddd;
+}
 
-📈 Grafik Bitcoin
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#f7931a;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+transition:.3s;
+}
 
-██████▇▇▆▇█
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 20px #f7931a;
+}
 
--------------------------
+.card{
+width:320px;
+margin:40px auto;
+padding:25px;
+background:#161b22;
+border-radius:15px;
+text-align:center;
+box-shadow:0 0 20px rgba(247,147,26,.2);
+animation:float 3s ease-in-out infinite;
+}
 
-Market Cap
-$2.3 Triliun
+.price{
+font-size:40px;
+color:#00ff99;
+margin:10px 0;
+}
 
-Volume
-$38 Miliar
+.info{
+padding:60px 20px;
+max-width:900px;
+margin:auto;
+text-align:center;
+}
 
-Supply
-19.9 Juta BTC
+footer{
+padding:20px;
+text-align:center;
+color:#999;
+}
 
--------------------------
+@keyframes glow{
+from{
+text-shadow:0 0 10px #f7931a;
+}
+to{
+text-shadow:0 0 35px #f7931a;
+}
+}
 
-Kenapa Bitcoin?
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0);}
+}
+</style>
+</head>
 
-✔ Aman
-✔ Terdesentralisasi
-✔ Digunakan di seluruh dunia
+<body>
 
--------------------------
+<section class="hero">
+<div>
+<h1>₿ Bitcoin</h1>
+<p>The Future of Money</p>
+<a href="#harga" class="btn">Lihat Harga</a>
+</div>
+</section>
 
+<section id="harga">
+
+<div class="card">
+<h2>Harga Bitcoin</h2>
+<div class="price" id="btc">Loading...</div>
+<p>Data dari CoinGecko</p>
+</div>
+
+</section>
+
+<section class="info">
+<h2>Apa itu Bitcoin?</h2>
+<br>
+<p>
+Bitcoin adalah mata uang digital pertama di dunia yang menggunakan teknologi blockchain.
+Bitcoin dapat dikirim ke seluruh dunia tanpa perantara bank dan memiliki jumlah maksimal
+21 juta BTC.
+</p>
+</section>
+
+<footer>
 © 2026 BitcoinHub
+</footer>
+
+<script>
+
+fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd")
+.then(res=>res.json())
+.then(data=>{
+document.getElementById("btc").innerHTML="$"+data.bitcoin.usd.toLocaleString();
+})
+.catch(()=>{
+document.getElementById("btc").innerHTML="Gagal Memuat";
+});
+
+</script>
+
+</body>
+</html>
