@@ -1,344 +1,40 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechNexus Solutions - Jasa IT Profesional</title>
-    <style>
-        /* --- RESET & VARIABLE --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+            ------------------------------------------------
+🟠 BITCOIN
 
-        :root {
-            --bg-primary: #0a0a0c;
-            --bg-secondary: #121216;
-            --bg-card: #1c1c24;
-            --accent-color: #00f2fe;
-            --text-main: #ffffff;
-            --text-muted: #a0a0aa;
-        }
+The Future of Money
 
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+Harga Live
+$118,540
 
-        html {
-            scroll-behavior: smooth;
-        }
+▲ +2.35%
 
-        /* --- NAVBAR --- */
-        header {
-            background-color: rgba(10, 10, 12, 0.95);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
-        }
+[ Lihat Harga ]   [ Pelajari Bitcoin ]
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-        }
+-------------------------
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
+📈 Grafik Bitcoin
 
-        .logo span {
-            color: var(--accent-color);
-        }
+██████▇▇▆▇█
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+-------------------------
 
-        .nav-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
+Market Cap
+$2.3 Triliun
 
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
+Volume
+$38 Miliar
 
-        /* TOMBOL CTA (SUDAH DIOPTIMALKAN UNTUK LINK) */
-        .btn-cta {
-            background: transparent;
-            color: var(--accent-color);
-            border: 2px solid var(--accent-color);
-            padding: 0.6rem 1.2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-            text-decoration: none;
-        }
+Supply
+19.9 Juta BTC
 
-        .btn-cta:hover {
-            background: var(--accent-color);
-            color: #000;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-        }
+-------------------------
 
-        /* --- HERO SECTION --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 2rem;
-            margin-top: 60px;
-            background: radial-gradient(circle at center, #1a1a2e 0%, var(--bg-primary) 70%);
-        }
+Kenapa Bitcoin?
 
-        .hero-content {
-            max-width: 800px;
-        }
+✔ Aman
+✔ Terdesentralisasi
+✔ Digunakan di seluruh dunia
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
+-------------------------
 
-        .hero h1 span {
-            color: var(--accent-color);
-            text-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-        }
-
-        /* --- SERVICES SECTION --- */
-        .services {
-            padding: 7rem 2rem;
-            background-color: var(--bg-secondary);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            font-weight: 700;
-        }
-
-        .section-title span {
-            color: var(--accent-color);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background-color: var(--bg-card);
-            padding: 2.5rem 2rem;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #252530;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* --- CONTACT SECTION --- */
-        .contact {
-            padding: 7rem 2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background-color: var(--bg-card);
-            border: 1px solid #333;
-            border-radius: 5px;
-            color: #fff;
-            outline: none;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--accent-color);
-        }
-
-        .btn-submit {
-            background-color: var(--accent-color);
-            color: #000;
-            border: none;
-            padding: 1rem;
-            border-radius: 5px;
-            font-weight: 700;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-
-        .btn-submit:hover {
-            background-color: #00b8c4;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: var(--bg-primary);
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            border-top: 1px solid #222;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- NAVBAR -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Tech<span>Nexus</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Layanan</a></li>
-                <li><a href="#contact">Hubungi Kami</a></li>
-            </ul>
-            <!-- LINK WHATSAPP NAVBAR -->
-            <a href="https://wa.me/628123456789?text=Halo%20TechNexus,%20saya%20ingin%20konsultasi%20mengenai%20jasa%20IT." class="btn-cta" target="_blank">Konsultasi Gratis</a>
-        </nav>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Transformasi Bisnis Anda dengan <span>Solusi IT Modern</span></h1>
-            <p>Kami menyediakan layanan pengembangan software, keamanan siber, dan pengelolaan infrastruktur cloud terbaik untuk mempercepat pertumbuhan bisnis Anda.</p>
-            <!-- LINK WHATSAPP HERO BUTTON -->
-            <a href="https://wa.me/628123456789?text=Halo%20TechNexus,%20saya%20tertarik%20dengan%20layanan%20IT%20Anda." class="btn-cta" style="padding: 1rem 2rem; font-size: 1rem;" target="_blank">Hubungi Kami Sekarang</a>
-        </div>
-    </section>
-
-    <!-- SERVICES SECTION -->
-    <section id="services" class="services">
-        <h2 class="section-title">Layanan <span>Kami</span></h2>
-        <div class="services-grid">
-            
-            <div class="service-card">
-                <div class="service-icon">🌐</div>
-                <h3>Web & Mobile Dev</h3>
-                <p>Pembuatan website perusahaan, e-commerce, dan aplikasi mobile kustom dengan performa tinggi dan desain responsif.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🛡️</div>
-                <h3>Cyber Security</h3>
-                <p>Perlindungan data menyeluruh, audit keamanan sistem, dan mitigasi risiko dari ancaman serangan siber.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">☁️</div>
-                <h3>Cloud Solutions</h3>
-                <p>Migrasi infrastruktur ke cloud (AWS, Google Cloud, Azure) yang aman, scalable, dan hemat biaya.</p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🛠️</div>
-                <h3>IT Support & Managed Services</h3>
-                <p>Dukungan teknis 24/7 untuk memastikan sistem IT perusahaan Anda berjalan tanpa hambatan.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact">
-        <h2 class="section-title">Mulai <span>Proyek Anda</span></h2>
-        <p>Diskusikan kebutuhan teknologi bisnis Anda bersama tim ahli kami. Kami siap membantu.</p>
-        
-        <form class="contact-form" onsubmit="event.preventDefault(); alert('Pesan berhasil dikirim! (Ini adalah simulasi)');">
-            <div class="form-group">
-                <input type="text" placeholder="Nama Lengkap" required>
-            </div>
-            <div class="form-group">
-                <input type="email" placeholder="Email Bisnis" required>
-            </div>
-            <div class="form-group">
-                <textarea rows="5" placeholder="Ceritakan kebutuhan IT Anda..." required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Kirim Pesan</button>
-        </form>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 TechNexus Solutions. Seluruh Hak Cipta Dilindungi.</p>
-    </footer>
-
-</body>
-</html>
+© 2026 BitcoinHub
